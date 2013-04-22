@@ -21,7 +21,7 @@ var mainCtrl = function($scope) {
     $scope.tasks = [];
     angular.forEach(oldTasks, function(task) {
       if (!task.done) {
-
+        $scope.tasks.push(task);
       }
     });
   };
