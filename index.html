@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>Angularの練習</title>
+  <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+  <script src="myscript.js"></script>
+  <style>
+    .done-true {
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo list</h1>
+  <div ng-controller="mainCtrl">
+  <ul>
+  <li ng-repeat="task in tasks">
+    <input type="checkbox" ng-model="task.done">
+    <span class="done-{{task.done}}">{{task.body}}</span>
+  </li>
+  </ul>
+  </div>
+</body>
+</html>
